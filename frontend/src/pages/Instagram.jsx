@@ -11,6 +11,7 @@ function Instagram() {
     <section className="page-section">
       <div className="content-frame">
         <PageHeader
+          className="page-header--narrow"
           eyebrow={t('instagramPage.eyebrow')}
           title={t('instagramPage.title')}
           description={t('instagramPage.description')}

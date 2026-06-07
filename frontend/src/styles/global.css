@@ -389,10 +389,31 @@ main {
   margin-bottom: clamp(28px, 4vw, 44px);
 }
 
+.page-header {
+  display: grid;
+  gap: 14px;
+}
+
+.page-header--narrow {
+  max-width: min(42rem, 100%);
+}
+
+.page-header--quote {
+  max-width: min(58rem, 100%);
+}
+
 .section-heading h2,
 .page-header h1 {
-  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-size: clamp(2.4rem, 4.5vw, 4.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
   text-wrap: balance;
+}
+
+.page-header--quote h1 {
+  max-width: 11ch;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 0.9;
 }
 
 .page-header__description,
@@ -404,6 +425,11 @@ main {
   color: var(--color-muted);
   font-size: clamp(1rem, 0.96rem + 0.15vw, 1.08rem);
   line-height: 1.8;
+}
+
+.page-header__description {
+  max-width: min(42rem, 100%);
+  margin: 0;
 }
 
 .portfolio-grid {
@@ -516,6 +542,11 @@ main {
   padding: clamp(20px, 3vw, 28px);
 }
 
+.split-section--artist {
+  align-items: start;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+}
+
 .split-section--contact {
   grid-template-columns: 0.8fr 1.2fr;
 }
@@ -532,6 +563,14 @@ main {
   padding: clamp(22px, 3vw, 34px);
 }
 
+.copy-card {
+  align-content: start;
+}
+
+.copy-card p {
+  margin: 0;
+}
+
 .booking-panel {
   grid-template-columns: 0.9fr 1.1fr;
   align-items: start;
@@ -539,8 +578,8 @@ main {
 }
 
 .booking-panel__intro {
-  max-width: 34rem;
-  padding-right: 10px;
+  max-width: 30rem;
+  padding-right: 0;
 }
 
 .appointment-form {
@@ -609,6 +648,7 @@ main {
 .faq-list {
   display: grid;
   gap: 16px;
+  max-width: min(var(--container-max), 100%);
 }
 
 .faq-item {
@@ -688,6 +728,10 @@ main {
   line-height: 1.8;
 }
 
+.feedback-group__heading {
+  max-width: 34rem;
+}
+
 .feedback-sections {
   display: grid;
   gap: clamp(22px, 3vw, 36px);
@@ -710,6 +754,15 @@ main {
 }
 
 .feedback-card p {
+  margin: 0;
+}
+
+.instagram-card {
+  max-width: min(72rem, 100%);
+}
+
+.instagram-card p {
+  max-width: 42rem;
   margin: 0;
 }
 
@@ -800,6 +853,10 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 
+  .split-section--artist {
+    grid-template-columns: 1fr;
+  }
+
   .portfolio-grid,
   .portfolio-gallery,
   .feedback-grid {
@@ -876,6 +933,11 @@ main {
 
   .hero h1 {
     font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .page-header--quote h1 {
+    max-width: 10ch;
+    font-size: clamp(2.8rem, 9vw, 4.8rem);
   }
 
   .copy-card,
@@ -972,6 +1034,11 @@ main {
   .section-heading h2,
   .page-header h1 {
     font-size: clamp(2rem, 11vw, 2.8rem);
+  }
+
+  .page-header--quote h1 {
+    max-width: 9ch;
+    font-size: clamp(2.2rem, 10.2vw, 3.35rem);
   }
 
   .portfolio-card__image-wrap,

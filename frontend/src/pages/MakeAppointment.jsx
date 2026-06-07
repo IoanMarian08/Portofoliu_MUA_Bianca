@@ -10,6 +10,7 @@ function MakeAppointment() {
     <section className="page-section">
       <div className="content-frame">
         <PageHeader
+          className="page-header--narrow"
           eyebrow={t('appointment.eyebrow')}
           title={t('appointment.title')}
           description={t('appointment.description')}

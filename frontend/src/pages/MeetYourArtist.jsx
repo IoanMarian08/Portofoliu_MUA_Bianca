@@ -3,23 +3,7 @@ import Button from '../components/Button';
 import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import { useTranslation } from '../hooks/useTranslation';
-
-const portraitPlaceholder =
-  'data:image/svg+xml;utf8,' +
-  encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
-      <defs>
-        <linearGradient id="p" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#eee1d4" />
-          <stop offset="100%" stop-color="#90715d" />
-        </linearGradient>
-      </defs>
-      <rect width="1200" height="1500" fill="url(#p)" />
-      <text x="50%" y="50%" text-anchor="middle" fill="#fffaf3" font-size="72" font-family="Georgia, serif" letter-spacing="10">
-        ARTIST PORTRAIT
-      </text>
-    </svg>
-  `);
+import artistPortrait from '../assets/images/meet_the_artist.PNG';
 
 function MeetYourArtist() {
   const { t } = useTranslation();
@@ -29,16 +13,17 @@ function MeetYourArtist() {
     <section className="page-section">
       <div className="content-frame">
         <PageHeader
+          className="page-header--quote"
           eyebrow={t('meetArtist.eyebrow')}
           title={t('meetArtist.title')}
           description={t('meetArtist.description')}
         />
 
-        <div className="split-section">
+        <div className="split-section split-section--artist">
           <Reveal>
             <img
               className="feature-image"
-              src={portraitPlaceholder}
+              src={artistPortrait}
               alt={t('meetArtist.portraitAlt')}
               loading="lazy"
               decoding="async"

@@ -9,6 +9,7 @@ function FAQs() {
     <section className="page-section">
       <div className="content-frame">
         <PageHeader
+          className="page-header--narrow"
           eyebrow={t('faqPage.eyebrow')}
           title={t('faqPage.title')}
           description={t('faqPage.description')}

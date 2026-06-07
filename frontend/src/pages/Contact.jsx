@@ -23,6 +23,7 @@ function Contact() {
     <section className="page-section">
       <div className="content-frame">
         <PageHeader
+          className="page-header--narrow"
           eyebrow={t('contactPage.eyebrow')}
           title={t('contactPage.title')}
           description={t('contactPage.description')}

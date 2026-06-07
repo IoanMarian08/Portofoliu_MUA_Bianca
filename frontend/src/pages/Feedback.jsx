@@ -37,6 +37,7 @@ function Feedback() {
     <section className="page-section">
       <div className="content-frame">
         <PageHeader
+          className="page-header--narrow"
           eyebrow={t('feedbackPage.eyebrow')}
           title={t('feedbackPage.title')}
           description={t('feedbackPage.description')}
