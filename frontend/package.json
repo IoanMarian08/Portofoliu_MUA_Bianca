@@ -1,0 +1,24 @@
+{
+  "name": "makeup-artist-website-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "convert:images": "node scripts/convert-heic-images.js",
+    "dev": "npm run convert:images && vite",
+    "prebuild": "npm run convert:images",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.33.5",
+    "vite": "^5.4.2"
+  }
+}
