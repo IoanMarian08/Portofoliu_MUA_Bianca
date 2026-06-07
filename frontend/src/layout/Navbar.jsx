@@ -9,6 +9,7 @@ const navItems = [
   { labelKey: 'nav.contact', to: '/contact' },
   { labelKey: 'nav.makeAppointment', to: '/make-an-appointment' },
   { labelKey: 'nav.instagram', to: '/instagram' },
+  { labelKey: 'nav.feedback', to: '/feedback' },
   { labelKey: 'nav.faqs', to: '/faqs' }
 ];
 

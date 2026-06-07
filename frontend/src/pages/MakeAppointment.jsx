@@ -19,7 +19,7 @@ function MakeAppointment() {
           <div className="booking-panel__intro">
             <p className="eyebrow">{t('appointment.introEyebrow')}</p>
             <h2>{t('appointment.introTitle')}</h2>
-            <p>{t('appointment.introDescription')}</p>
+            {t('appointment.introDescription') ? <p>{t('appointment.introDescription')}</p> : null}
           </div>
           <AppointmentForm />
         </Reveal>

@@ -23,6 +23,7 @@ const portraitPlaceholder =
 
 function MeetYourArtist() {
   const { t } = useTranslation();
+  const story = t('meetArtist.story');
 
   return (
     <section className="page-section">
@@ -44,8 +45,9 @@ function MeetYourArtist() {
             />
           </Reveal>
           <Reveal className="copy-card" delay={120}>
-            <p>{t('meetArtist.paragraphOne')}</p>
-            <p>{t('meetArtist.paragraphTwo')}</p>
+            {Array.isArray(story)
+              ? story.map((paragraph, index) => <p key={`meet-artist-${index}`}>{paragraph}</p>)
+              : null}
             <Button as={Link} to="/make-an-appointment">
               {t('meetArtist.cta')}
             </Button>

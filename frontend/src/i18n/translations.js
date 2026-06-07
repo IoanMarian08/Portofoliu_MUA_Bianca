@@ -8,10 +8,12 @@ export const translations = {
       languageSwitchLabel: 'Schimbă limba în',
       close: 'Închide',
       contact: 'Contact',
+      feedback: 'Feedback',
       instagram: 'Instagram',
       facebook: 'Facebook',
       tiktok: 'TikTok',
       name: 'Nume',
+      firstName: 'Prenume',
       email: 'Email',
       message: 'Mesaj',
       sendMessage: 'Trimite mesajul',
@@ -24,19 +26,18 @@ export const translations = {
       contact: 'CONTACT',
       makeAppointment: 'PROGRAMEAZĂ-TE',
       instagram: 'INSTAGRAM',
+      feedback: 'FEEDBACK',
       faqs: 'ÎNTREBĂRI FRECVENTE'
     },
     home: {
-      heroLabel: 'Artă în machiaj de lux',
-      heroTagline:
-        'Frumusețe editorială, glamour delicat și un finisaj rafinat pentru momente care merită prezență.',
+      heroLabel: '',
+      heroTagline: '',
       heroCta: 'CUNOAȘTE ARTISTUL',
       introAria: 'Secțiune introductivă cu video',
       portfolioEyebrow: 'Lucrări selectate',
       portfolioTitle: 'Portofoliu',
       contactEyebrow: 'Contact',
-      contactTitle:
-        'Disponibilitate, canale sociale și contact direct, reunite într-un singur spațiu rafinat.'
+      contactTitle: ''
     },
     portfolio: {
       categories: {
@@ -50,8 +51,7 @@ export const translations = {
         coperte: 'COPERTE'
       },
       galleryEyebrow: 'Portofoliu',
-      galleryDescription:
-        'O selecție vizuală completă din categoria aleasă, prezentată într-o pagină dedicată.',
+      galleryDescription: '',
       backToPortfolio: 'ÎNAPOI LA PORTOFOLIU',
       categoryNotFoundTitle: 'Categoria nu a fost găsită.',
       categoryNotFoundDescription:
@@ -65,13 +65,21 @@ export const translations = {
     },
     meetArtist: {
       eyebrow: 'Cunoaște artistul',
-      title: 'Machiaj rafinat construit în jurul detaliului, luminii și încrederii.',
-      description:
-        'Un spațiu elegant pentru a prezenta artista, filosofia ei și estetica semnătură din spatele lucrărilor.',
-      paragraphOne:
-        'Bianca este un makeup artist profesionist orientat către piele luminoasă, structură atent echilibrată și look-uri elevate care păstrează naturalețea. Abordarea ei pornește de la accentuare, nu de la exces, combinând frumusețea modernă cu o eleganță atemporală.',
-      paragraphTwo:
-        'De la dimineți de nuntă la concepte editoriale, fiecare programare este gândită în jurul clientei, al contextului și al stării finale pe care machiajul trebuie să o transmită. Această secțiune este pregătită pentru biografia finală, acreditări și filosofia ta de servicii.',
+      title:
+        "\"IT'S NOT THE MAKEUP THAT TRANSFORMS US, IT'S THE WAY WE FEEL ABOUT OURSELVES WHEN WE FEEL BEAUTIFUL\"",
+      description: '',
+      story: [
+        'Numele meu este Bianca Elena, însă în timpul facultății am ajuns să fiu cunoscută drept Beanq — un joc ciudat de litere la început, dar care, în timp, a devenit parte din identitatea mea și din personalitatea pe care o exprim astăzi.',
+        'Pasiunea mea pentru make-up a început acum mai bine de 10 ani, într-o perioadă în care viața mea se învârtea în jurul muzicii, teatrului și dansului. Participam constant la spectacole și concerte, iar unul dintre lucrurile care mă fascinau cel mai mult era să privesc culisele: colege mai mari pregătindu-se pentru scenă, cu eyeliner negru intens, gene dramatice, buze roșii și mult sclipici. Atunci s-a aprins scânteia.',
+        'În liceu, petreceam ore întregi în fața oglinzii exersând eyeliner-ul perfect, folosind un eyeliner tip cariocă — care, sincer, și astăzi îmi este mai apropiat decât orice pensulă. Părinții mei spuneau mereu că este „doar o fază” și că, în timp, voi renunța la obsesia pentru machiaj și la orele petrecute în oglindă. Se pare că nu au avut dreptate.',
+        'Încă din adolescență îmi plăcea să îmi chem prietenele acasă, să ne închidem în cameră și să recreăm look-urile pe care le vedeam pe YouTube, Vine sau Instagram. Era perioada cut crease-urilor, iar cu o singură paletă de farduri încercam să transform inspirația în realitate.',
+        'Anii au trecut, am devenit adult, iar machiajul a rămas constant acel lucru pe care îl făceam cu aceeași pasiune, cu aceeași curiozitate și cu dorința continuă de a evolua.',
+        'În toamna anului 2024 am început să mă gândesc serios la o schimbare majoră: să renunț la cariera mea de profesor pentru copii și să investesc într-un curs de bază pentru make-up artiști. Când am început să vorbesc despre această idee, mulți oameni au râs. Mi s-a spus că este prea târziu, că domeniul este suprasaturat, că investesc prea mulți bani și că „ai nevoie de 10.000 de ore ca să devii bun”.',
+        'Pentru o clipă, m-am îndoit și eu. Dar nu suficient cât să renunț. Mi-am luat inima în dinți și am ales necunoscutul. Am făcut primul curs de make-up și, după doar 7 zile, în a 8-a zi, când m-am așezat în fața oglinzii, nu mai știam nici măcar ce pensule să aleg. Eram copleșită de informații, tehnici, teorii și reguli noi. A fost nevoie de timp să mă reconstruiesc și să-mi găsesc ritmul.',
+        'Apoi au urmat alte cursuri. Zile întregi de practică. Ore petrecute machiindu-mă pe mine, modele, prietene. Și, într-o zi, au apărut primele cliente.',
+        'Astăzi, pentru mine, machiajul nu este doar un accesoriu. Este un lifestyle. Este acel moment în care vezi o femeie privindu-se în oglindă și observi cum începe să radieze, cum capătă mai multă încredere și cum își redescoperă frumusețea.',
+        'Pentru că machiajul nu înseamnă să porți o mască. Machiajul înseamnă să fii cea mai frumoasă versiune a ta.'
+      ],
       cta: 'PROGRAMEAZĂ-TE',
       portraitAlt: 'Imagine placeholder pentru portretul makeup artistului'
     },
@@ -92,8 +100,7 @@ export const translations = {
         'Include data preferată, serviciul dorit și detaliile evenimentului. Cererea este transmisă direct prin serviciul backend de email.',
       introEyebrow: 'Formular de programare',
       introTitle: 'Conceput pentru claritate, rapiditate și o experiență calmă, premium.',
-      introDescription:
-        'Folosește acest formular pentru mirese, programări private, proiecte editoriale sau evenimente speciale. Câmpurile obligatorii ajută la transmiterea completă a cererii înainte de răspuns.',
+      introDescription: '',
       fullName: 'Nume complet',
       email: 'Email',
       phone: 'Număr de telefon',
@@ -199,6 +206,51 @@ export const translations = {
         }
       }
     },
+    feedbackPage: {
+      eyebrow: 'Feedback',
+      title: 'Experiențe reale, momente memorabile și cuvinte care rămân.',
+      description:
+        'O selecție de mesaje primite de la cliente după programări private, evenimente și zile de nuntă.',
+      beautyTitle: 'Feedback programări și evenimente',
+      bridalTitle: 'Feedback mirese',
+      formEyebrow: 'Lasă un mesaj',
+      formTitle: 'Un formular scurt pentru feedback nou.',
+      formDescription:
+        'Poți adăuga aici un mesaj scurt despre experiență, confort, rezistența machiajului sau momentul pentru care te-ai programat.',
+      feedbackPlaceholder:
+        'Scrie câteva rânduri despre cum te-ai simțit, cât a rezistat machiajul sau ce ți-a plăcut cel mai mult.',
+      submit: 'Trimite feedback',
+      success:
+        'Mulțumesc! Formularul demonstrativ a fost trimis local și poate fi conectat ulterior la un flux real.',
+      testimonials: {
+        beauty: [
+          '„Nu exagerez când spun că a fost unul dintre cele mai rezistente machiaje pe care le-am avut vreodată 😍 Am dansat, am transpirat, am stat ore întregi și tot a arătat impecabil! În plus, m-am simțit super confortabil și relaxată. Recomand din suflet ❤️”',
+          '„M-am simțit efectiv superbă 🥹✨ Machiajul a fost exact cum mi-am imaginat și chiar mai mult de atât. Super rezistent, super comfy și făcut cu multă grijă. Se vede când cineva pune pasiune în ceea ce face ❤️”',
+          '„Îți mulțumesc enorm ❤️ Machiajul a rezistat perfect până dimineața, inclusiv rujul (!!) și genele nu s-au mișcat deloc 😂 Cu siguranță revin și recomand tuturor!”',
+          '„Pe lângă faptul că machiajul a fost superb, experiența în sine a fost super plăcută 🥹 M-am simțit foarte relaxată și ascultată, iar rezultatul a fost exact ce îmi doream. Recomand cu toată încrederea ❤️”',
+          '„Nu credeam că poate exista un machiaj care să arate atât de bine și după 12+ ore 😭❤️ Rezistență 1000/10, confort 1000/10 și vibe-ul a fost minunat. Mulțumesc încă o dată!!”',
+          '„Am primit complimente toată seara pentru machiaj 😭✨ Și sincer? Meritat! A rezistat impecabil, nu s-a strâns, nu s-a mișcat și m-am simțit super frumoasă. Recomand din tot sufletul ❤️”',
+          '„Genele au supraviețuit petrecerii, somnului și încă erau acolo dimineața 😂❤️ Cred că asta spune tot. Super mulțumită și abia aștept următoarea programare!”',
+          '„Nu doar că machiajul a fost superb, dar energia ta face toată experiența și mai frumoasă ❤️ Te face să te simți confortabil din primul minut și rezultatul vorbește de la sine ✨”',
+          '„Cel mai bun sentiment este când uiți că porți machiaj pentru că este atât de confortabil 🥹 Și totuși arată impecabil ore întregi. Mulțumesc mult ❤️”',
+          '„Am plâns, am râs, am dansat și machiajul tot a rămas la locul lui 😂❤️ Cred că asta e cea mai bună recenzie posibilă!”'
+        ],
+        bridal: [
+          '„Nu am cuvinte să îți mulțumesc pentru cum m-ai făcut să mă simt în ziua nunții mele 🥹❤️ Machiajul a rezistat impecabil de dimineață până la finalul petrecerii, inclusiv după plâns, pupici și mult dans 😂 Recomand din tot sufletul!”',
+          '„În cea mai importantă zi din viața mea m-am simțit exact cum mi-am dorit: frumoasă, feminină și eu însămi ❤️ Machiajul a fost perfect, super rezistent și m-am simțit extraordinar toată ziua. Mulțumesc pentru răbdare și pentru energia ta minunată ✨”',
+          '„Am plâns la cununia civilă, la biserică, la dansul cu tata și machiajul încă arăta impecabil 😂❤️ Cred că asta spune tot! Mulțumesc că ai contribuit la una dintre cele mai frumoase zile din viața mea 🥹”',
+          '„Încă mă uit la poze și nu îmi vine să cred cât de frumos a arătat machiajul 😭❤️ M-am simțit ca cea mai frumoasă versiune a mea și asta era tot ce îmi doream pentru ziua nunții.”',
+          '„Nu doar că machiajul a rezistat PERFECT peste 15 ore, dar m-ai făcut să mă simt calmă într-o zi atât de haotică 😂❤️ Mulțumesc pentru răbdare, energie și talent!”',
+          '„Mi-am dorit un machiaj elegant, rezistent și care să mă reprezinte și exact asta am primit ❤️ Toată lumea m-a întrebat cine m-a machiat și cred că asta spune suficient 🥹✨”',
+          '„Când m-am văzut în oglindă înainte să plec spre ceremonie, aproape că am început să plâng (și nu voiam încă 😂) ❤️ M-am simțit superbă și îți mulțumesc enorm pentru asta!”',
+          '„Am avut emoții foarte mari că machiajul nu va rezista toată ziua, dar efectiv nu s-a mișcat 😭❤️ De la pregătiri până la ultimul dans, totul a rămas impecabil. Recomand din toată inima!”',
+          '„Pe lângă talent, contează enorm omul pe care îl ai lângă tine în dimineața nunții. Tu ai adus calm, răbdare și voie bună ❤️ Și da… machiajul a fost absolut superb ✨”',
+          '„Genele au supraviețuit lacrimilor, căldurii, îmbrățișărilor și petrecerii 😂❤️ Dacă asta nu înseamnă rezistență, nu știu ce înseamnă! Mulțumesc pentru tot 🥹”',
+          '„Nu am vrut să mă simt ‘prea machiată’, voiam doar să mă simt cea mai frumoasă versiune a mea. Exact asta ai reușit ❤️ Natural, elegant și suficient de rezistent pentru cea mai lungă zi din viața mea ✨”',
+          '„Sincer, unul dintre cele mai bune lucruri pe care le-am făcut pentru nunta mea a fost alegerea make-up artistului potrivit ❤️ M-am simțit superbă, iar machiajul a arătat impecabil inclusiv la 4 dimineața 😂”'
+        ]
+      }
+    },
     footer: {
       copyright: '© 2026 Makeup by Bianca. Toate drepturile rezervate.'
     }
@@ -212,10 +264,12 @@ export const translations = {
       languageSwitchLabel: 'Switch language to',
       close: 'Close',
       contact: 'Contact',
+      feedback: 'Feedback',
       instagram: 'Instagram',
       facebook: 'Facebook',
       tiktok: 'TikTok',
       name: 'Name',
+      firstName: 'First name',
       email: 'Email',
       message: 'Message',
       sendMessage: 'Send message',
@@ -228,19 +282,18 @@ export const translations = {
       contact: 'CONTACT',
       makeAppointment: 'MAKE AN APPOINTMENT',
       instagram: 'INSTAGRAM',
+      feedback: 'FEEDBACK',
       faqs: 'FAQs'
     },
     home: {
-      heroLabel: 'Luxury Makeup Artistry',
-      heroTagline:
-        'Editorial beauty, soft glamour, and polished artistry for modern moments.',
+      heroLabel: '',
+      heroTagline: '',
       heroCta: 'MEET YOUR ARTIST',
       introAria: 'Introductory hero section',
       portfolioEyebrow: 'Selected Work',
       portfolioTitle: 'Portfolio',
       contactEyebrow: 'Contact',
-      contactTitle:
-        'Availability, social channels, and direct contact in one refined place.'
+      contactTitle: ''
     },
     portfolio: {
       categories: {
@@ -254,8 +307,7 @@ export const translations = {
         coperte: 'COVERS'
       },
       galleryEyebrow: 'Portfolio',
-      galleryDescription:
-        'A complete visual selection from the chosen category, presented on its own dedicated page.',
+      galleryDescription: '',
       backToPortfolio: 'BACK TO PORTFOLIO',
       categoryNotFoundTitle: 'Category not found.',
       categoryNotFoundDescription:
@@ -269,13 +321,21 @@ export const translations = {
     },
     meetArtist: {
       eyebrow: 'Meet Your Artist',
-      title: 'Refined makeup artistry shaped by detail, softness, and confidence.',
-      description:
-        'A polished space to introduce the artist, philosophy, and signature aesthetic behind the work.',
-      paragraphOne:
-        'Bianca is a professional makeup artist focused on luminous skin, thoughtful structure, and looks that feel elevated without losing personality. Her approach is built around enhancement rather than excess, blending modern beauty with timeless restraint.',
-      paragraphTwo:
-        'From bridal mornings to editorial concepts, every appointment is shaped around the client, the setting, and the final feeling the work should leave behind. This section is ready for your final biography, credentials, and signature service philosophy.',
+      title:
+        "\"IT'S NOT THE MAKEUP THAT TRANSFORMS US, IT'S THE WAY WE FEEL ABOUT OURSELVES WHEN WE FEEL BEAUTIFUL\"",
+      description: '',
+      story: [
+        'My name is Bianca Elena, but during university I became known as Beanq, a strange little play on letters at first that slowly turned into a part of my identity and the personality I express today.',
+        'My passion for makeup began more than 10 years ago, in a time when my life revolved around music, theatre, and dance. I was constantly involved in performances and concerts, and one of the things that fascinated me most was watching backstage: older girls getting ready for the stage with intense black eyeliner, dramatic lashes, red lips, and lots of glitter. That was the moment the spark lit up.',
+        'In high school, I spent hours in front of the mirror practicing the perfect eyeliner, using a felt-tip liner that, honestly, still feels closer to me today than any brush. My parents always said it was just a phase and that eventually I would give up my obsession with makeup and the hours spent in front of the mirror. It turns out they were wrong.',
+        'Even as a teenager, I loved inviting my friends over, closing ourselves in my room, and recreating the looks we saw on YouTube, Vine, or Instagram. It was the era of cut creases, and with a single eyeshadow palette I kept trying to turn inspiration into reality.',
+        'The years passed, I grew up, and makeup remained the one thing I kept doing with the same passion, the same curiosity, and the same constant desire to evolve.',
+        'In the autumn of 2024, I started seriously thinking about a major change: leaving my career as a teacher for children and investing in a foundational makeup artist course. When I began talking about the idea, many people laughed. I was told it was too late, that the industry was oversaturated, that I was investing too much money, and that you need 10,000 hours to become good.',
+        'For a moment, I doubted myself too. But not enough to quit. I gathered my courage and chose the unknown. I took my first makeup course and after only 7 days, on the 8th day, when I sat in front of the mirror, I did not even know which brushes to pick. I was overwhelmed by information, techniques, theories, and new rules. It took time to rebuild myself and find my rhythm.',
+        'Then more courses followed. Full days of practice. Hours spent doing makeup on myself, on models, on friends. And one day, the first clients arrived.',
+        'Today, makeup is not just an accessory for me. It is a lifestyle. It is that moment when you see a woman looking in the mirror and notice how she starts to glow, how she becomes more confident, and how she rediscovers her beauty.',
+        'Because makeup is not about wearing a mask. Makeup is about being the most beautiful version of yourself.'
+      ],
       cta: 'MAKE AN APPOINTMENT',
       portraitAlt: 'Portrait placeholder for the makeup artist'
     },
@@ -296,8 +356,7 @@ export const translations = {
         'Share your preferred date, service, and event information. The request is sent directly through the backend email service.',
       introEyebrow: 'Booking Form',
       introTitle: 'Designed for clarity, speed, and a calm luxury experience.',
-      introDescription:
-        'Use this form for bridal enquiries, private appointments, editorial work, or special events. Required fields help ensure nothing essential is missed before a reply is sent.',
+      introDescription: '',
       fullName: 'Full name',
       email: 'Email',
       phone: 'Phone number',
@@ -401,6 +460,51 @@ export const translations = {
           answer:
             'Your request is sent directly by email. Once reviewed, you will receive a reply to confirm availability, discuss details, and finalize the next steps.'
         }
+      }
+    },
+    feedbackPage: {
+      eyebrow: 'Feedback',
+      title: 'Real experiences, memorable moments, and words that stay with you.',
+      description:
+        'A curated selection of messages received from clients after private appointments, events, and wedding days.',
+      beautyTitle: 'Appointments and event feedback',
+      bridalTitle: 'Bridal feedback',
+      formEyebrow: 'Leave a message',
+      formTitle: 'A short form for new feedback.',
+      formDescription:
+        'You can add a short message here about the experience, the comfort, the wear time, or the moment you booked for.',
+      feedbackPlaceholder:
+        'Write a few lines about how you felt, how the makeup wore, or what you loved most.',
+      submit: 'Send feedback',
+      success:
+        'Thank you. This demo form was submitted locally and can be connected to a real flow later.',
+      testimonials: {
+        beauty: [
+          '"I’m not exaggerating when I say it was one of the longest-lasting makeup looks I’ve ever had 😍 I danced, I sweated, I wore it for hours and it still looked impeccable! On top of that, I felt super comfortable and relaxed. Wholeheartedly recommend ❤️"',
+          '"I genuinely felt gorgeous 🥹✨ The makeup was exactly how I imagined it and even more than that. Super long-lasting, super comfy, and done with so much care. You can tell when someone puts passion into what they do ❤️"',
+          '"Thank you so, so much ❤️ The makeup lasted perfectly until the morning, even the lipstick (!!), and the lashes didn’t move at all 😂 I’ll definitely be back and I recommend you to everyone!"',
+          '"Not only was the makeup beautiful, but the whole experience itself was so lovely 🥹 I felt really relaxed and listened to, and the final result was exactly what I wanted. I recommend you with all my confidence ❤️"',
+          '"I didn’t think a makeup look could still look this good after 12+ hours 😭❤️ Wear 1000/10, comfort 1000/10, and the vibe was wonderful. Thank you again!!"',
+          '"I got compliments on my makeup all evening 😭✨ And honestly? Deserved! It lasted impeccably, didn’t crease, didn’t move, and I felt so beautiful. I recommend you with all my heart ❤️"',
+          '"The lashes survived the party, sleep, and they were still there in the morning 😂❤️ I think that says it all. Super happy and already can’t wait for the next appointment!"',
+          '"Not only was the makeup stunning, but your energy makes the whole experience even more beautiful ❤️ You make people feel comfortable from the very first minute and the result speaks for itself ✨"',
+          '"The best feeling is forgetting you’re wearing makeup because it’s that comfortable 🥹 And yet it still looks flawless for hours. Thank you so much ❤️"',
+          '"I cried, I laughed, I danced, and the makeup still stayed in place 😂❤️ I think that’s the best review possible!"'
+        ],
+        bridal: [
+          '"I don’t have words to thank you for how you made me feel on my wedding day 🥹❤️ The makeup lasted impeccably from the morning until the very end of the party, even after crying, kisses, and lots of dancing 😂 I recommend you with all my heart!"',
+          '"On the most important day of my life, I felt exactly how I wanted to feel: beautiful, feminine, and still myself ❤️ The makeup was perfect, super long-lasting, and I felt amazing all day. Thank you for your patience and your wonderful energy ✨"',
+          '"I cried at the civil ceremony, at church, during the dance with my dad, and the makeup still looked impeccable 😂❤️ I think that says it all! Thank you for being part of one of the most beautiful days of my life 🥹"',
+          '"I still look at the photos and can’t believe how beautiful the makeup looked 😭❤️ I felt like the most beautiful version of myself, and that was everything I wanted for my wedding day."',
+          '"Not only did the makeup last PERFECTLY for over 15 hours, but you also made me feel calm on such a chaotic day 😂❤️ Thank you for your patience, energy, and talent!"',
+          '"I wanted an elegant, long-lasting makeup look that still felt like me, and that’s exactly what I got ❤️ Everyone kept asking who did my makeup, and I think that says enough 🥹✨"',
+          '"When I saw myself in the mirror before leaving for the ceremony, I almost started crying (and I didn’t want to yet 😂) ❤️ I felt gorgeous and I can’t thank you enough for that!"',
+          '"I was so worried the makeup wouldn’t last all day, but it literally didn’t move 😭❤️ From the preparations to the last dance, everything stayed flawless. I recommend you with all my heart!"',
+          '"Beyond talent, it matters so much who you have next to you on the morning of your wedding. You brought calm, patience, and good energy ❤️ And yes... the makeup was absolutely stunning ✨"',
+          '"The lashes survived tears, heat, hugs, and the party 😂❤️ If that doesn’t mean lasting power, I don’t know what does! Thank you for everything 🥹"',
+          '"I didn’t want to feel “too made up”, I just wanted to feel like the most beautiful version of myself. That’s exactly what you achieved ❤️ Natural, elegant, and lasting enough for the longest day of my life ✨"',
+          '"Honestly, one of the best things I did for my wedding was choosing the right makeup artist ❤️ I felt gorgeous, and the makeup still looked impeccable even at 4 in the morning 😂"'
+        ]
       }
     },
     footer: {

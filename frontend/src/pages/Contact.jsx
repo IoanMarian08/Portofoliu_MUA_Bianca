@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { CONTACT_DETAILS } from '../constants/site';
 import Button from '../components/Button';
 import InputField from '../components/InputField';
@@ -40,6 +41,9 @@ function Contact() {
               <a href={CONTACT_DETAILS.tiktok} target="_blank" rel="noreferrer">
                 {t('common.tiktok')}
               </a>
+              <Button as={Link} to="/feedback" className="button--secondary">
+                {t('common.feedback')}
+              </Button>
             </div>
           </Reveal>
 

@@ -7,6 +7,7 @@ import MakeAppointment from './pages/MakeAppointment';
 import Instagram from './pages/Instagram';
 import FAQs from './pages/FAQs';
 import PortfolioCategory from './pages/PortfolioCategory';
+import Feedback from './pages/Feedback';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/make-an-appointment" element={<MakeAppointment />} />
         <Route path="/instagram" element={<Instagram />} />
         <Route path="/faqs" element={<FAQs />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="/portfolio/:slug" element={<PortfolioCategory />} />
       </Route>
     </Routes>

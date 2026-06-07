@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import { BRAND, HERO_VIDEO_URL } from '../constants/site';
+import { BRAND } from '../constants/site';
 import { useTranslation } from '../hooks/useTranslation';
 import Button from './Button';
+import phoneHeroVideo from '../assets/videos/phone video.mov';
+import landscapeHeroVideo from '../assets/videos/landscape video.mov';
 
 function HeroVideo() {
   const { t } = useTranslation();
@@ -9,20 +11,30 @@ function HeroVideo() {
   return (
     <section className="hero" aria-label={t('home.introAria')}>
       <video
-        className="hero__video"
+        className="hero__video hero__video--mobile"
+        src={phoneHeroVideo}
         autoPlay
         muted
         loop
         playsInline
         poster=""
-      >
-        <source src={HERO_VIDEO_URL} type="video/mp4" />
-      </video>
+        preload="auto"
+      />
+      <video
+        className="hero__video hero__video--desktop"
+        src={landscapeHeroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster=""
+        preload="auto"
+      />
       <div className="hero__overlay" />
       <div className="hero__content">
-        <p className="eyebrow">{t('home.heroLabel')}</p>
+        {t('home.heroLabel') ? <p className="eyebrow">{t('home.heroLabel')}</p> : null}
         <h1>{BRAND.name}</h1>
-        <p>{t('home.heroTagline')}</p>
+        {t('home.heroTagline') ? <p>{t('home.heroTagline')}</p> : null}
         <Button as={Link} to="/meet-your-artist">
           {t('home.heroCta')}
         </Button>
