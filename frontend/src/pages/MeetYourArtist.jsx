@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import { useTranslation } from '../hooks/useTranslation';
-import artistPortrait from '../assets/images/meet_the_artist.PNG';
+import artistPortrait from '../assets/images/meet_the_artist.png';
 
 function MeetYourArtist() {
   const { t } = useTranslation();
