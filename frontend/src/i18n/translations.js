@@ -66,7 +66,7 @@ export const translations = {
     meetArtist: {
       eyebrow: 'Cunoaște artistul',
       title:
-        "\"IT'S NOT THE MAKEUP THAT TRANSFORMS US, IT'S THE WAY WE FEEL ABOUT OURSELVES WHEN WE FEEL BEAUTIFUL\"",
+        '"NU MACHIAJUL ESTE CEL CARE NE TRANSFORMĂ, CI FELUL ÎN CARE NE SIMȚIM ÎN PIELEA NOASTRĂ ATUNCI CÂND NE SIMȚIM FRUMOASE"',
       description: '',
       story: [
         'Numele meu este Bianca Elena, însă în timpul facultății am ajuns să fiu cunoscută drept Beanq — un joc ciudat de litere la început, dar care, în timp, a devenit parte din identitatea mea și din personalitatea pe care o exprim astăzi.',
