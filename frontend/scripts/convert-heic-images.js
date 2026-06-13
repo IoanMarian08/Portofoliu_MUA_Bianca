@@ -74,6 +74,24 @@ async function walkDirectory(directoryPath) {
   return files.flat();
 }
 
+async function removeEmptyDirectories(directoryPath) {
+  const entries = await fs.readdir(directoryPath, { withFileTypes: true });
+
+  await Promise.all(
+    entries
+      .filter((entry) => entry.isDirectory())
+      .map(async (entry) => {
+        const childPath = path.join(directoryPath, entry.name);
+        await removeEmptyDirectories(childPath);
+      })
+  );
+
+  const remainingEntries = await fs.readdir(directoryPath);
+  if (remainingEntries.length === 0 && directoryPath !== OUTPUT_DIR) {
+    await fs.rmdir(directoryPath);
+  }
+}
+
 async function convertHeicToWebp(sourcePath, outputPath) {
   const sourceBuffer = await fs.readFile(sourcePath);
   const decodedBuffer = await heicConvert({
@@ -89,7 +107,7 @@ async function copyBrowserImage(sourcePath, outputPath) {
   await fs.copyFile(sourcePath, outputPath);
 }
 
-async function processFile(sourcePath, manifestCandidates, failures) {
+async function processFile(sourcePath, manifestCandidates, failures, expectedOutputs) {
   const extension = normalizeExtension(sourcePath);
   const relativeSourcePath = path.relative(SOURCE_DIR, sourcePath);
   const parsedPath = path.parse(relativeSourcePath);
@@ -98,7 +116,12 @@ async function processFile(sourcePath, manifestCandidates, failures) {
     : path.join(parsedPath.dir, parsedPath.base);
   const outputPath = path.join(OUTPUT_DIR, outputRelativePath);
 
+  if (!parsedPath.dir) {
+    return;
+  }
+
   await ensureDirectory(path.dirname(outputPath));
+  expectedOutputs.add(outputPath);
 
   try {
     const needsUpdate = await shouldRegenerate(sourcePath, outputPath);
@@ -135,6 +158,25 @@ async function processFile(sourcePath, manifestCandidates, failures) {
     });
     console.error(`Failed processing ${relativeSourcePath}: ${error.message}`);
   }
+}
+
+async function removeStaleOutputs(expectedOutputs) {
+  if (!(await pathExists(OUTPUT_DIR))) {
+    return;
+  }
+
+  const outputFiles = await walkDirectory(OUTPUT_DIR);
+
+  await Promise.all(
+    outputFiles.map(async (outputFile) => {
+      if (!expectedOutputs.has(outputFile)) {
+        await fs.unlink(outputFile);
+        console.log(`Removed stale generated file: ${path.relative(OUTPUT_DIR, outputFile)}`);
+      }
+    })
+  );
+
+  await removeEmptyDirectories(OUTPUT_DIR);
 }
 
 function buildManifest(manifestCandidates) {
@@ -189,10 +231,13 @@ async function main() {
 
   const manifestCandidates = new Map();
   const failures = [];
+  const expectedOutputs = new Set();
 
   for (const sourceFile of sourceFiles) {
-    await processFile(sourceFile, manifestCandidates, failures);
+    await processFile(sourceFile, manifestCandidates, failures, expectedOutputs);
   }
+
+  await removeStaleOutputs(expectedOutputs);
 
   const manifest = buildManifest(manifestCandidates);
   await writeManifest(manifest);

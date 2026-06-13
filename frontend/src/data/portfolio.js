@@ -1,5 +1,10 @@
 import generatedPortfolioImages from './generatedPortfolioImages.json';
 
+const naturalCollator = new Intl.Collator(undefined, {
+  numeric: true,
+  sensitivity: 'base'
+});
+
 const imageBase =
   'data:image/svg+xml;utf8,' +
   encodeURIComponent(`
@@ -58,8 +63,22 @@ const categoryDefinitions = [
   }
 ];
 
+function getImageSortKey(imagePath) {
+  const decodedPath = decodeURIComponent(imagePath);
+  const fileName = decodedPath.split('/').pop() || decodedPath;
+  const dotIndex = fileName.lastIndexOf('.');
+
+  return dotIndex > 0 ? fileName.slice(0, dotIndex) : fileName;
+}
+
+function sortImagesNaturally(images) {
+  return [...images].sort((left, right) =>
+    naturalCollator.compare(getImageSortKey(left), getImageSortKey(right))
+  );
+}
+
 function buildCategory(definition) {
-  const images = generatedPortfolioImages[definition.folderName] || [];
+  const images = sortImagesNaturally(generatedPortfolioImages[definition.folderName] || []);
 
   return {
     id: definition.slug,
