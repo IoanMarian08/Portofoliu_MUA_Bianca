@@ -5,6 +5,6 @@ export const BRAND = {
 export const CONTACT_DETAILS = {
   email: 'bianca.buca@yahoo.com',
   facebook: 'https://facebook.com/',
-  instagram: 'https://instagram.com/',
-  tiktok: 'https://tiktok.com/'
+  instagram: 'https://www.instagram.com/beanq.mua',
+  tiktok: 'https://www.tiktok.com/@bianca.elena.mua'
 };

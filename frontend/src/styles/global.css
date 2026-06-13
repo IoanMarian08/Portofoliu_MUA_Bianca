@@ -43,9 +43,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100svh;
   overflow-x: hidden;
   font-family: var(--font-body);
   font-size: var(--text-body);
@@ -80,7 +87,15 @@ textarea {
   -webkit-tap-highlight-color: transparent;
 }
 
+.site-shell {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
+  flex: 1 0 auto;
   overflow: hidden;
 }
 
@@ -353,6 +368,8 @@ main {
   gap: clamp(18px, 3vw, 40px);
   padding: clamp(20px, 4vw, 36px) 0 clamp(40px, 6vw, 72px);
   border-bottom: 1px solid var(--color-line);
+  max-width: min(980px, 100%);
+  margin: 0 auto;
 }
 
 .menu-columns__column {
@@ -363,20 +380,38 @@ main {
 .menu-link {
   display: flex;
   align-items: center;
-  min-height: 72px;
-  border-bottom: 1px solid var(--color-line);
-  padding: 12px 0;
+  justify-content: center;
+  min-height: 84px;
+  border: 1px solid rgba(93, 72, 56, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 251, 246, 0.7);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 22px;
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   line-height: 1.1;
   letter-spacing: 0.04em;
+  text-align: center;
   text-wrap: pretty;
-  transition: transform 240ms ease, color 240ms ease;
+  transition:
+    transform 240ms ease,
+    color 240ms ease,
+    border-color 240ms ease,
+    background 240ms ease,
+    box-shadow 240ms ease;
 }
 
 .menu-link:hover {
-  transform: translateX(8px);
+  transform: translateY(-2px);
   color: var(--color-accent);
+  border-color: rgba(79, 55, 43, 0.24);
+  background: rgba(255, 251, 246, 0.92);
+}
+
+.menu-link.active {
+  color: var(--color-text);
+  border-color: rgba(79, 55, 43, 0.24);
+  background: rgba(255, 251, 246, 0.96);
 }
 
 .section {
@@ -530,6 +565,7 @@ main {
 
 .site-footer {
   width: min(var(--container-max), calc(100vw - (var(--page-padding) * 2)));
+  margin-top: auto;
   padding: 0 0 calc(24px + env(safe-area-inset-bottom, 0));
   color: var(--color-muted);
   font-size: clamp(0.82rem, 0.78rem + 0.12vw, 0.92rem);
