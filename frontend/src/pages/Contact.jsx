@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { submitContactMessage } from '../api/contact';
 import { CONTACT_DETAILS } from '../constants/site';
 import Button from '../components/Button';
 import InputField from '../components/InputField';
@@ -9,14 +10,35 @@ import TextareaField from '../components/TextareaField';
 import { useTranslation } from '../hooks/useTranslation';
 
 function Contact() {
-  const { t } = useTranslation();
-  const [submitted, setSubmitted] = useState(false);
+  const { t, language } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
   const [values, setValues] = useState({ name: '', email: '', message: '' });
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    setSubmitted(true);
-    setValues({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const response = await submitContactMessage({
+        ...values,
+        language
+      });
+
+      setStatus({
+        type: 'success',
+        message: response.message || t('contactPage.formSuccess')
+      });
+      setValues({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: error.message || t('contactPage.formError')
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -57,6 +79,7 @@ function Contact() {
                 type="text"
                 value={values.name}
                 onChange={(event) => setValues({ ...values, name: event.target.value })}
+                disabled={isSubmitting}
                 required
               />
               <InputField
@@ -66,6 +89,7 @@ function Contact() {
                 type="email"
                 value={values.email}
                 onChange={(event) => setValues({ ...values, email: event.target.value })}
+                disabled={isSubmitting}
                 required
               />
               <TextareaField
@@ -75,12 +99,21 @@ function Contact() {
                 rows="5"
                 value={values.message}
                 onChange={(event) => setValues({ ...values, message: event.target.value })}
+                disabled={isSubmitting}
                 required
               />
-              {submitted ? (
-                <div className="form-status form-status--success">{t('contactPage.formSuccess')}</div>
+              {status.message ? (
+                <div
+                  className={`form-status ${
+                    status.type === 'success' ? 'form-status--success' : 'form-status--error'
+                  }`}
+                >
+                  {status.message}
+                </div>
               ) : null}
-              <Button type="submit">{t('common.sendMessage')}</Button>
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? t('contactPage.sending') : t('common.sendMessage')}
+              </Button>
             </form>
           </Reveal>
         </div>

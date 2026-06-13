@@ -88,8 +88,9 @@ export const translations = {
         'Date directe de contact și prezență socială pentru colaborări, întrebări și programări.',
       description:
         'Folosește pagina de programări pentru cereri de booking sau scrie aici pentru comunicare generală.',
-      formSuccess:
-        'Mulțumim. Acest formular de contact demonstrativ poate fi conectat ulterior la un flux backend dedicat.'
+      formSuccess: 'Mesajul tău a fost trimis cu succes.',
+      formError: 'A apărut o eroare. Te rugăm să încerci din nou.',
+      sending: 'Se trimite...'
     },
     appointment: {
       eyebrow: 'Programează-te',
@@ -219,8 +220,7 @@ export const translations = {
       feedbackPlaceholder:
         'Scrie câteva rânduri despre cum te-ai simțit, cât a rezistat machiajul sau ce ți-a plăcut cel mai mult.',
       submit: 'Trimite feedback',
-      success:
-        'Mulțumesc! Formularul demonstrativ a fost trimis local și poate fi conectat ulterior la un flux real.',
+      success: 'Mulțumim pentru feedbackul trimis.',
       testimonials: {
         beauty: [
           '„Nu exagerez când spun că a fost unul dintre cele mai rezistente machiaje pe care le-am avut vreodată 😍 Am dansat, am transpirat, am stat ore întregi și tot a arătat impecabil! În plus, m-am simțit super confortabil și relaxată. Recomand din suflet ❤️”',
@@ -343,8 +343,9 @@ export const translations = {
         'Direct contact and social presence for enquiries, collaborations, and appointments.',
       description:
         'Use the booking page for appointment requests or reach out here for general communication.',
-      formSuccess:
-        'Thank you. This placeholder contact form is ready to be connected to a future backend flow if needed.'
+      formSuccess: 'Your message has been sent successfully.',
+      formError: 'Something went wrong. Please try again.',
+      sending: 'Sending...'
     },
     appointment: {
       eyebrow: 'Make an Appointment',
@@ -474,8 +475,7 @@ export const translations = {
       feedbackPlaceholder:
         'Write a few lines about how you felt, how the makeup wore, or what you loved most.',
       submit: 'Send feedback',
-      success:
-        'Thank you. This demo form was submitted locally and can be connected to a real flow later.',
+      success: 'Thank you for your feedback.',
       testimonials: {
         beauty: [
           '"I’m not exaggerating when I say it was one of the longest-lasting makeup looks I’ve ever had 😍 I danced, I sweated, I wore it for hours and it still looked impeccable! On top of that, I felt super comfortable and relaxed. Wholeheartedly recommend ❤️"',
