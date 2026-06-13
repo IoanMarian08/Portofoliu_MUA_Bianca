@@ -47,8 +47,7 @@ export const translations = {
         bridal: 'BRIDAL',
         softGlam: 'SOFT GLAM',
         matureSkin: 'MATURE SKIN',
-        fashionShow: 'FASHION SHOW X INTERACT CISMIGIU',
-        coperte: 'COPERTE'
+        fashionShow: 'FASHION SHOW X INTERACT CISMIGIU'
       },
       galleryEyebrow: 'Portofoliu',
       galleryDescription: '',
@@ -303,8 +302,7 @@ export const translations = {
         bridal: 'BRIDAL',
         softGlam: 'SOFT GLAM',
         matureSkin: 'MATURE SKIN',
-        fashionShow: 'FASHION SHOW X INTERACT CISMIGIU',
-        coperte: 'COVERS'
+        fashionShow: 'FASHION SHOW X INTERACT CISMIGIU'
       },
       galleryEyebrow: 'Portfolio',
       galleryDescription: '',

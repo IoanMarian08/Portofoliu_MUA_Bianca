@@ -55,11 +55,6 @@ const categoryDefinitions = [
     folderName: 'fashion show x interact cismigiu',
     slug: 'fashion-show-x-interact-cismigiu',
     titleKey: 'portfolio.categories.fashionShow'
-  },
-  {
-    folderName: 'coperte',
-    slug: 'coperte',
-    titleKey: 'portfolio.categories.coperte'
   }
 ];
 
